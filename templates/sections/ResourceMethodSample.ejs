@@ -1,0 +1,14 @@
+<%if(samples && samples.length){ -%>
+> Sample <%=type%>
+
+<% samples.forEach((sample) => { -%>
+<%if(sample.statusCode){-%>
+<%=sample.statusCode%> <%=sample.statusText%>
+<%}-%>
+
+```<%=sample.lang%>
+<%-sample.source%>
+```
+<% }); -%>
+<% } -%>
+

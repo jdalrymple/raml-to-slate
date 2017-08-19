@@ -1,0 +1,22 @@
+---
+title: <%=title%>
+
+language_tabs:
+<% languages.forEach((language) => { -%>
+  - <%=language%>
+<%});%>
+<% if (tocFooters && tocFooters.length) { -%>
+toc_footers:
+<% tocFooters.forEach((footer) => { -%>
+  - <%=footer%>
+<%}); -%>
+<% } -%>
+<% if (includes && includes.length) { -%>
+includes:
+<% includes.forEach((include) => { -%>
+  - <%=include%>
+<%}); -%>
+<% } -%>
+search: <%=allowSearch%>
+---
+

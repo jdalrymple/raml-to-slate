@@ -1,0 +1,21 @@
+## <%=method.displayName %>
+
+<%- include('ResourceMethodSample', { samples: method.requestSamples, type:'Request' }); -%>
+<%- include('ResourceMethodSample', { samples: method.responseSamples, type:'Response' }); -%>
+<%= method.requestDescription -%>
+
+### Request
+
+`<%=method.method.toUpperCase()%> <%=method.endpoint%>`
+
+<%- include('Parameters', { params: method.ups, type: 'URL' }); -%>
+
+<%- include('Parameters', { params: method.qps, type: 'Query' }); -%>
+
+<%- include('Parameters', { params: method.bps, type: 'Body' }); -%>
+
+### Response
+
+<%= method.responseDescription -%>
+
+<%- include('Parameters', { params: method.rps, type: '' }); -%>

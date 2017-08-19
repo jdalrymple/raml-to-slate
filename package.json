@@ -1,0 +1,20 @@
+{
+  "name": "raml-to-slate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "ejs": "^2.5.7",
+    "fs-extra": "^4.0.1",
+    "http-status-codes": "^1.2.0",
+    "lodash": "^4.17.4",
+    "raml-1-parser": "^1.1.29"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

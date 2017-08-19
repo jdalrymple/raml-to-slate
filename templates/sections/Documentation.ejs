@@ -1,0 +1,7 @@
+<% if (documentation && documentation.length) { -%>
+<% documentation.forEach((document) => { -%>
+# <%=document.title%>
+<%=document.content%>
+<%}); -%>
+<% } -%>
+

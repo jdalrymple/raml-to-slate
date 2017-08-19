@@ -1,0 +1,6 @@
+
+# <%=title%>
+
+<% methods.forEach((method) => { %>
+<%- include('ResourceMethod', { method: method }); %>
+<% }); %>

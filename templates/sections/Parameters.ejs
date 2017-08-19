@@ -1,0 +1,9 @@
+<%if(params && params.length){-%>
+### <%=type%> Parameters
+
+Parameter | Default | Type  | Required  | Description
+--------- | ------- | ----- | --------- | ----------
+<% params.forEach((p) => { -%>
+<%=p.name%> | <%=p.default%> | <%=p.type%>  | <%=p.required%>  | <%=p.description%>
+<%});-%>
+<%}-%>

@@ -1,0 +1,114 @@
+#%RAML 1.0
+---
+title: Test
+documentation:
+  - title: Getting Started
+    content: |
+      This is a getting started guide for the World Music API.
+  - title: Getting Started Again!!!
+    content: |
+      This is a getting started guide for the World Music API.
+
+types:
+  CodeSample:
+    properties:
+      lang: string
+      source: string
+
+annotationTypes:
+  codeSamples: CodeSample[]  
+
+/things:
+  displayName: Things
+  get:
+    displayName: Gets all the Things
+    description: |
+      This endpoint returns all the things
+    (codeSamples):
+      - lang: javascript
+        source: |
+          var a = 9
+      - lang: ruby
+        source: |
+          something
+    queryParameters:
+      p1:
+        type: string
+        description: some queryParameters
+        required: false
+    responses:
+        200:
+          description: |
+            A successful request returns the HTTP 201 Created status code and a JSON response body that 
+            shows plan details including the plan state and an ID that uniquely identifies the plan. The 
+            default state of a new plan is CREATED. Before you can create an agreement from a plan, you 
+            must activate the plan by updating its state to ACTIVE.
+          body:
+            application/json:
+              properties:
+                message:
+                  type: string
+                  description: The return message
+                  required: true
+                  default: ""
+              example: 
+                message: "Hello world"
+  /{id}:
+    displayName: Things/{id}
+    uriParameters:
+      id:
+        type: number
+        description: ID of this specific thing
+        required: true
+    get:
+      displayName: Gets specifc Thing
+      description: |
+        This endpoint returns one thing
+      queryParameters:
+        p1:
+          type: string
+          description: some queryParameters
+          required: false
+      responses:
+        200:
+          description: |
+            A successful request returns the HTTP 201 Created status code and a JSON response body that 
+            shows plan details including the plan state and an ID that uniquely identifies the plan. The 
+            default state of a new plan is CREATED. Before you can create an agreement from a plan, you 
+            must activate the plan by updating its state to ACTIVE.
+          body:
+            application/json:
+              properties:
+                message:
+                  type: string
+                  description: The return message
+                  required: true
+                  default: ""
+              example: 
+                message: "Hello world"
+    post:
+      displayName: Create specifc Thing
+      description: |
+        This endpoint creates one thing
+      body:
+        p1:
+          type: string
+          description: some body param
+          required: true
+      responses:
+        200:
+          description: |
+            A successful request returns the HTTP 201 Created status code and a JSON response body that 
+            shows plan details including the plan state and an ID that uniquely identifies the plan. The 
+            default state of a new plan is CREATED. Before you can create an agreement from a plan, you 
+            must activate the plan by updating its state to ACTIVE.
+          body:
+            application/json:
+              properties:
+                message:
+                  type: string
+                  description: The return message
+                  required: true
+                  default: ""
+              example: 
+                message: "Hello world"
